@@ -1,0 +1,30 @@
+<% if(users.length > 0) { %>
+<table class="main-container__table">
+    <tr>
+        <th>Sr.</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile</th>
+        <th>Image</th>
+        <th>Details</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <% for(let user of users) { %>
+    <tr>
+        <td><%= user.Sr %></td>
+        <td><%= user.firstName %></td>
+        <td><%= user.lastName %></td>
+        <td><%= user.mobile %></td>
+        <td><a href="javascript:void(0)">image</a></td>
+        <td><a href="/user/<%= user._id %>">Details</a></td>
+        <td><a href="/edit-user/<%= user._id %>">Edit</a></td>
+        <td><a href="/delete/<%= user._id %>">Delete</a></td>
+    </tr>
+    <% } %>
+</table>
+<% } else { %>
+<h1 class="main-container__title">
+    User Not Found!
+</h1>
+<% } %>

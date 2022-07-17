@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('head') %>
+        <link rel="stylesheet" href="/css/form.css">
+    </head>
+    <body>
+        <%- include('header') %>
+        <main class="main-container">
+            <h1 class="main-container__title">
+                <%= pageTitle %>
+            </h1>
+
+            <form action="/edit-user" method="post" class="main-container__form">
+                <div class="main-container__form--fields">
+                    <label for="First Name" class="main-container__form--fields__label">First Name</label>
+                    <input type="text" name="firstName" id="" value="<%= user.firstName %>" class="main-container__form--fields__input" <% if(editUser) { %><% } else { %> disabled <% } %>>
+                </div>
+                <div class="main-container__form--fields">
+                    <label for="First Name" class="main-container__form--fields__label">Last Name</label>
+                    <input type="text" name="lastName" id="" value="<%= user.lastName %>" class="main-container__form--fields__input" <% if(editUser) { %><% } else { %> disabled <% } %>>
+                </div>
+                <div class="main-container__form--fields">
+                    <label for="First Name" class="main-container__form--fields__label">Mobile No.</label>
+                    <input type="tel" name="mobile" id="" value="<%= user.mobile %>" class="main-container__form--fields__input" <% if(editUser) { %><% } else { %> disabled <% } %>>
+                </div>
+                <% if(editUser) { %>
+                <div class="main-container__form--fields">
+                    <input type="text" name="id" value="<%= user._id %>"  disabled>
+                    <button type="submit">Submit</button>
+                </div>
+                <% } %>
+            </form>
+
+        </main>
+    </body>
+</html>

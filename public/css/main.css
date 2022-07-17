@@ -1,0 +1,9 @@
+.main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-container__title{
+    margin-bottom: 3rem;
+}

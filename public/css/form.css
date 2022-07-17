@@ -1,0 +1,45 @@
+.main-container__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    border-radius: 0.5rem;
+    align-items: center;
+}
+.main-container__form--fields{
+    display: flex;
+    gap: 1rem;
+}
+.main-container__form--fields__filed{
+    align-self: center;
+}
+.main-container__form--fields__input:not([type="file"]){
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    border-radius: .2rem;
+    height: 1.3rem;
+}
+.fileInput{
+    width: 85%;
+}
+button[type="submit"],button[type="reset"]{
+min-width: 5rem;
+padding: 0.3rem 1.5rem;
+border: none;
+outline: none;
+border-radius: .2rem;
+}
+button[type="submit"]{
+background-color: #0061ff;
+}
+button[type="submit"]:active{
+background-color: #0062ffa8;
+}
+button[type="reset"]{
+background-color: red;
+}
+button[type="reset"]:active{
+background-color: rgba(255, 0, 0, 0.705);
+}
